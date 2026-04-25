@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Post-its Fofos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>✨ Minhas Notas ✨</h1>
+            <button id="add-btn" class="main-btn">Criar Novo Post-it</button>
+        </header>
+
+        <main id="notes-grid" class="notes-grid">
+            </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Escreva sua nota (Markdown)</h3>
+            <textarea id="title-input" placeholder="# Título&#10;"></textarea>
+            <textarea id="note-input" placeholder="- Item 1&#10;- Item 2"></textarea>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="cancel-btn">Cancelar</button>
+                <button onclick="saveNote()" class="save-btn">Salvar Post-it</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
